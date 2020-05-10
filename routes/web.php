@@ -33,3 +33,11 @@ Route::get('/clientProfile', function () {
 Route::get('/viewOurLawyers', function () {
     return view('viewOurLawyers');
 });
+
+Route::get('/registerNewCase',function(){
+    return view('registerNewCase');
+});
+
+Route::get('/caseRecords',function(){
+    return view('caseRecords');
+});
