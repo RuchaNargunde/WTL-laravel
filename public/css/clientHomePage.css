@@ -6,7 +6,7 @@ html,body{
 .my-hr
 {
 	background-color:white;
-	width:108%;
+	width:104%;
 	height: 0.5px;
 }
 
@@ -27,8 +27,7 @@ html,body{
 .mynavbar-item
 {
 	color: white;
-	/*font-family: 'Crimson Text', sans-serif;*/
-	font-family: 'Special Elite', cursive; /*'Bitter', serif;*/
+	font-family: 'Special Elite', cursive; 
 	font-size: 18px;
 	transition-property: border-radius;
 	transition-duration: 0.3s;
@@ -62,6 +61,7 @@ height: 100%;
 	font-family: 'Special Elite', cursive; 
 	font-size: 18px;
 	width: 200px;
+	/* text-align: center; */
 }
 
 .nav-item a.active {
@@ -69,3 +69,18 @@ height: 100%;
 	background-color: white;
 	border-radius: 20px;
   }
+
+  
+.user-image {
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+}
+
+.user-content a {
+	text-decoration: none;
+}
+
+.user-content a:hover {
+	text-decoration: none;
+}

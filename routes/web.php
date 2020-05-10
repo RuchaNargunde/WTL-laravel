@@ -25,6 +25,13 @@ Route::group( ['prefix' => 'client-homepage'], function(){
 
 });
 
+Route::group( ['prefix' => 'advocate-homepage'], function(){
+
+    Route::get('/','advocateHPController@homepage');
+    Route::get('/announcements','advocateHPController@announce')->name('announcements');
+});
+
+
 
 Route::get('/clientProfile', function () {
     return view('clientProfile');
@@ -40,4 +47,17 @@ Route::get('/registerNewCase',function(){
 
 Route::get('/caseRecords',function(){
     return view('caseRecords');
+});
+
+
+Route::get('/advocateProfile', function () {
+    return view('advocate/advocateProfile');
+});
+
+Route::get('/caseRequest', function () {
+    return view('advocate/caseRequest');
+});
+
+Route::get('/advocateCurrentCases', function () {
+    return view('advocate/advocateCurrentCases');
 });
