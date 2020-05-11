@@ -40,7 +40,7 @@
 
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-	<script src="../javascript/registerNewCase.js" ></script>
+	<script src="/js/registerNewCase.js" ></script>
 	
 </body>
 </html>
