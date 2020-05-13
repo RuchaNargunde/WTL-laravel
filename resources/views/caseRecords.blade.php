@@ -20,46 +20,28 @@
 <br><br>
 	<h3>Find all your case records below:</h3>
 
-<div class="card-columns case_records">
+<div class="card-deck case_records">
+		
+	@foreach($results as $result)
 	<div class="card my-card shadow p-4 mb-5 bg-white rounded">
   		<div class="card-body">
-    		<h4 class="card-title my-card-title">Case Name</h4>
-    		<ul class="card-text">
-
-    			<li>Case Id:</li>
-    			<li>Case Type:</li>
-    			<li>Advocate Name:</li>
-    			<li>Case Details:</li>
-    			<li>Next hearing date:</li>
-
-    		</ul>
-   
- 		 </div>
-	</div>
-
-	<div class="card my-card shadow p-4 mb-5 bg-white rounded">
-  		<div class="card-body">
-    		<h4 class="card-title my-card-title">Card Name</h4>
+    		<h4 class="card-title my-card-title">{{ $result->case_name }}</h4>
     		  <ul class="card-text">
 
-    			<li>Case Id:</li>
-    			<li>Case Type:</li>
-    			<li>Advocate Name:</li>
-    			<li>Case Details:</li>
-    			<li>Next hearing date:</li>
+    			<li>Case Id: {{ $result->case_id }}</li>
+    			<li>Case Type: {{$result->case_type }}</li>
+    			<li>Advocate Name: {{ $result->name }}</li>
+    			<li>Case Details: {{ $result->case_details }}</li>
+    			<li>Next hearing date: {{ $result->next_hearing_date }}</li>
 
     		  </ul>
    
  		 </div>
 	</div>
-
+	@endforeach
 	
 
 </div>
-
-
-
-
 
 
 

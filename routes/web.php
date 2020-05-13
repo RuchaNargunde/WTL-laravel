@@ -45,9 +45,9 @@ Route::get('/registerNewCase',function(){
     return view('registerNewCase');
 });
 
-Route::get('/caseRecords',function(){
-    return view('caseRecords');
-});
+Route::post('/registerNewCase','registerNewCaseController@store');
+
+Route::get('/caseRecords','caseRecordsController@display');
 
 
 Route::get('/advocateProfile', function () {

@@ -18,7 +18,9 @@
 
 <body>
 
-	<form action="" name="register" id="form">
+	<form action="" method="POST" name="register" id="form">
+
+    @csrf
 
     <label for="casename">Case Name:</label>
     <input type="text" name="casename" id="casename" />

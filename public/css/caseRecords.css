@@ -8,6 +8,8 @@ html,body
 	margin-left: 5%;
 	margin-top: 5%;
 	margin-right: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .my-card
@@ -16,6 +18,7 @@ html,body
 	background-image:linear-gradient( to bottom ,#d6ae7b, #eacda3);
 	  color: #5b342e;
 	  font-weight: bold;
+
 }
 
 .my-card-title
