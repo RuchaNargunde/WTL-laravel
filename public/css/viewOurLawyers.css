@@ -12,22 +12,42 @@ h3
   text-decoration: underline;
 }
 
-
-.form-control {
-    padding-left: 2.375rem;
-}
-
-.my-input-grp:hover
+.my-input:hover
 {
   transition: all .4s ease-in-out;
-   transform: scale(1.1);
-}
+   transform: scale(1.02);
+} 
 
 .my-btn
 {
-  background-color: #800000;;
+  background-color: #800000;
+  color: white;
+  font-family:'Special Elite', cursive;
+  border-radius: 20px;
+  padding: 8px 8px;
+  width: 20;
+  margin-left: 1%;
 }
 
+.my-input
+{
+  padding:8px 8px;
+  font-family: 'Special Elite', cursive;
+}
+
+.my-div
+{
+  margin-left:40%;
+  margin-top: 2%;
+}
+
+.my-a
+{
+  text-decoration-line: underline;
+  font-family:'Special Elite', cursive;
+  color: black;
+  font-size: x-large;
+}
 
 .dashboard-cards {
   position: relative;
@@ -36,11 +56,8 @@ h3
 }
 
 .dashboard-cards .card {
-  /*border: 1px solid black;*/
 
   font-family: 'Special Elite', cursive;
-
-/*  font-family:*/ /*'Open Sans', sans-serif;*/  /*'Bitter', serif;*/
   font-weight: bolder;
   background: #ffffff;
   display: inline-block;

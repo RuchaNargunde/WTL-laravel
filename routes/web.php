@@ -37,9 +37,8 @@ Route::get('/clientProfile', function () {
     return view('clientProfile');
 });
 
-Route::get('/viewOurLawyers', function () {
-    return view('viewOurLawyers');
-});
+Route::get('/viewOurLawyers', 'viewOurLawyersController@display');
+Route::post('/viewOurLawyers','viewOurLawyersController@search');
 
 Route::get('/registerNewCase',function(){
     return view('registerNewCase');

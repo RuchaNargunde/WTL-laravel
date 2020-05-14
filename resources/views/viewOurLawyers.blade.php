@@ -21,62 +21,27 @@
 <br>
 	<h3>View Our List of Lawyers Below:</h3>
 
-  <div class="input-group mx-auto my-input-grp my-btn" style="width: 50%;margin-top: 3%;">
-  	<div class="input-group-prepend ">
-    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;font-family: 'Special Elite', cursive">Search by Category</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Name</a>
-      <a class="dropdown-item" href="#">Area of Expertise</a>
-    </div>
-  </div>
-    <input type="text" class="form-control" placeholder="Search this blog" style="font-family: 'Special Elite', cursive">
-    <div class="input-group-append">
-      <button class="btn my-btn" type="button" style="color: white;">
-        <i class="fa fa-search"></i>
-      </button>
-    </div>
-  </div>
+  <form action="/viewOurLawyers" method="POST" name="search_form" style="margin-left:11%;margin-top:4%;">
 
-<div class="row dashboard-cards" style="padding-top: 6%; padding-left: 5%;">
+  @csrf
+
+    <input type="text" placeholder="Search a lawyer" name="search" id="search" size="60" class="my-input">
+     <span><button type="Submit" name="submit" value="name" class="my-btn">Search by Name</button></span> 
+     <span><button type="Submit" name="submit" value="expertise" class="my-btn">Search by Expertise</button></span>
+  </form>
+
+  <div class="my-div"> <a href="viewOurLawyers" class="my-a" >(Show all lawyers)</a></div>
+
+<div class="row dashboard-cards" style="padding-top: 5%; padding-left: 5%;">
+
+  
+  @foreach($results as $result)
+
   <div class='card col-md-5'>
     <div class='card-title'>
       <h2>
-         Captain America
-        <small>Area of expertise: Criminal/Personal injury lawyer</small>
-      </h2>
-      <!-- <div class='task-count'>
-        14
-      </div> -->
-    </div>
-    <div class='card-flap flap1'>
-      <div class='card-description'>
-        <ul class='task-list'>
-          <li>
-            Qualification: BLL
-          </li>
-          <li>
-            Experience/Seniority: 10 years
-          </li>
-          <li>
-            No. of cases fought: 40
-          </li>
-          <li>
-          	Win percentage: 20%
-          </li>
-        </ul>
-      </div>
-      <div class='card-flap flap2'>
-        <div class='card-actions'>
-          <a class='btn' href='#'>Close</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class='card col-md-5'>
-    <div class='card-title'>
-      <h2>
-        Donald Trump
-        <small>Area of expertise: Immigration/Social Security Disability lawyer</small>
+        {{ $result->name }}
+        <small>Area of expertise: {{ $result->expertise }} </small>
       </h2>
     
     </div>
@@ -84,16 +49,16 @@
       <div class='card-description'>
         <ul class='task-list'>
         <li>
-            Qualification: BLL
+            Qualification: {{$result->qualification }}
           </li>
           <li>
-            Experience/Seniority: 10 years
+            Experience/Seniority: {{$result->experience }}
           </li>
           <li>
-            No. of cases fought: 40
+            No. of cases fought: {{$result->cases }}
           </li>
           <li>
-          	Win percentage: 20%
+            Win percentage: {{ ($result->win/$result->cases)*100 }} 
           </li>
         </ul>
       </div>
@@ -103,71 +68,9 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class='card col-md-5'>
-    <div class='card-title'>
-      <h2>
-        Narendra Modi
-        <small>Area of expertise: Civil Ligitation lawyer</small>
-      </h2>
-     
-    </div>
-    <div class='card-flap flap1'>
-      <div class='card-description'>
-        <ul class='task-list'>
-        <li>
-            Qualification: BLL
-          </li>
-          <li>
-            Experience/Seniority: 10 years
-          </li>
-          <li>
-            No. of cases fought: 40
-          </li>
-          <li>
-          	Win percentage: 20%
-          </li>
-        </ul>
-      </div>
-      <div class='card-flap flap2'>
-        <div class='card-actions'>
-          <a class='btn' href='#'>Close</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class='card col-md-5'>
-    <div class='card-title'>
-      <h2>
-        Amit Shah
-        <small>Area of expertise: Family/Immigration lawyer</small>
-      </h2>
-    
-    </div>
-    <div class='card-flap flap1'>
-      <div class='card-description'>
-        <ul class='task-list'>
-        <li>
-            Qualification: BLL
-          </li>
-          <li>
-            Experience/Seniority: 10 years
-          </li>
-          <li>
-            No. of cases fought: 40
-          </li>
-          <li>
-          	Win percentage: 20%
-          </li>
-        </ul>
-      </div>
-      <div class='card-flap flap2'>
-        <div class='card-actions'>
-          <a class='btn' href='#'>Close</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  </div> 
+
+  @endforeach
   
 </div>
 
